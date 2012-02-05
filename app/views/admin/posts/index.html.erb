@@ -1,0 +1,21 @@
+
+  <h1>Listing all Posts <span class="resource-total"><%= @posts.count %></span></h1>
+  <%= link_to 'New Post', new_admin_post_path %>
+
+
+
+  <table id="postlist" border="0" cellpadding="0" cellspacing="0">
+    
+    <thead align="left">
+      <tr>
+        <th class="title">Title</th>
+        <th class="category">Category</th>
+        <th class="status">Status</th>
+        <th class="date">Publish Date</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <%= render(:partial => "post", :collection => @posts )%>
+  </table>
+  
+
